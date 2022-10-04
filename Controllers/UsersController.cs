@@ -8,7 +8,7 @@ using Auth_NET6_Test.Helpers;
 using Auth_NET6_Test.Models.Users;
 using Auth_NET6_Test.Services;
 
-[Authorize]
+//[Authorize]
 [ApiController]
 [Route("[controller]")]
 public class UsersController : ControllerBase
@@ -27,7 +27,7 @@ public class UsersController : ControllerBase
         _appSettings = appSettings.Value;
     }
 
-    [AllowAnonymous]
+    //[AllowAnonymous]
     [HttpPost("authenticate")]
     public IActionResult Authenticate(AuthenticateRequest model)
     {
@@ -35,7 +35,7 @@ public class UsersController : ControllerBase
         return Ok(response);
     }
 
-    [AllowAnonymous]
+    //[AllowAnonymous]
     [HttpPost("register")]
     public IActionResult Register(RegisterRequest model)
     {
